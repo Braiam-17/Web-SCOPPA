@@ -1,0 +1,347 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 150px;
+    height: 75px;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    background: url('imagen1.webp') no-repeat center center;
+    background-size: cover;
+    height: 600px;
+    color: #fff;
+    padding-top: 80px;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 90%;
+}
+
+.hero h2 {
+    color: #fff;
+    font-size: 2.5em;
+    margin: 0 0 30px;
+    font-weight: 700;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    text-align: center;
+}
+
+.card-green {
+    background-color: #e0f7e0; /* Light green */
+}
+
+.card-blue {
+    background-color: #e0f0ff; /* Light blue */
+}
+
+.card-purple {
+    background-color: #f3e5f5; /* Light purple */
+}
+
+.card .icon {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.company-logo {
+    max-width: 100%; /* Ensure the logo fits within the card */
+    height: auto; /* Maintain aspect ratio */
+    margin: 10px 0; /* Match the margin of the original h3 */
+}
+
+.card p {
+    font-size: 0.9em;
+    margin: 0 0 15px;
+}
+
+.card button {
+    background-color: #8990f7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #00e0af;
+}
+
+.insurance-info {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #f5f7fa; /* Uniform background color for the entire section */
+}
+
+.insurance-info h2.emphasized-title {
+    color: #003087;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #FFC107;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.insurance-info h3.emphasized-title {
+    color: #003087;
+    margin: 10px 0;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-bottom: 2px solid #FFC107;
+    display: block;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.benefits-subtitle {
+    color: #003087;
+    font-size: 1.1em;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.benefits-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: nowrap;
+    margin-bottom: 30px;
+}
+
+.benefit-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.benefit-card h4 {
+    color: #003087;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.benefit-card p {
+    color: #555;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+.insurance-info p {
+    font-size: 1.3em;
+    margin-bottom: 20px;
+}
+
+.insurance-info ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.insurance-info li {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.requirements-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.requirements-list li {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.contact {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contact h2.emphasized-title {
+    color: #003087;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    font-family: 'Roboto', Arial, sans-serif;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+form button {
+    background-color: #003087;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #002060;
+}
+
+footer {
+    background-color: #003087;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-icons {
+    margin-top: 10px;
+}
+
+.footer-icons span {
+    margin: 0 15px;
+    font-size: 1.2em;
+}
+
+.footer-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-icons a:hover {
+    color: #FFC107;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .hero {
+        height: 800px;
+    }
+
+    .cards-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        min-width: 80%;
+    }
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 2em;
+    }
+
+    .insurance-info h2.emphasized-title {
+        font-size: 1.8em;
+    }
+
+    .insurance-info h3.emphasized-title {
+        font-size: 2em;
+    }
+
+    .benefits-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .benefit-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .insurance-info p {
+        font-size: 1.1em;
+    }
+
+    .requirements-list li {
+        font-size: 1.1em;
+    }
+}
