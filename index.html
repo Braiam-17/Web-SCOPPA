@@ -23,7 +23,7 @@
       <nav class="navbar">
         <div class="logo">
           <img
-            src="Logo Grupo Scoppa png.png"
+            src="./assets/images/Logo Grupo Scoppa.ai"
             width="150"
             height="75"
             alt="Grupo Scoppa Logo"
@@ -31,145 +31,207 @@
         </div>
       </nav>
     </header>
-    <section class="hero" id="home">
-      <div class="overlay">
-        <h2>Cotizá tu Seguro de Caución papi</h2>
-        <div class="cards-container">
-          <div class="card card-green">
-            <img
-              src="./assets/images/logo-TS.png"
-              alt="Triunfo Seguros Logo"
-              class="company-logo"
-            />
-            <p>
-              Garantías de obras, suministros y/o servicios públicos o privados,
-              garantías judiciales, garantía de alquileres, garantías aduaneras,
-              garantías de tenencia, garantías registro de importadores /
-              exportadores, desempeño de una actividad o profesión, agencias de
-              viajes y turismo, expendedores de combustibles
-            </p>
-            <button>COTIZAR</button>
+    <div>
+      <section class="hero" id="home">
+        <div class="overlay">
+          <div><h2>Cotizá tu Seguro de Caución</h2></div>
+
+          <div class="cards-container">
+            <div class="card card-green">
+              <img
+                src="./assets/images/logo-TS.png"
+                alt="Triunfo Seguros Logo"
+                class="company-logo"
+              />
+              <p>
+                Garantías de obras, suministros y/o servicios públicos o
+                privados, garantías judiciales, garantía de alquileres,
+                garantías aduaneras, garantías de tenencia, garantías registro
+                de importadores / exportadores, desempeño de una actividad o
+                profesión, agencias de viajes y turismo, expendedores de
+                combustibles
+              </p>
+              <button onclick="openPopup()">COTIZAR</button>
+            </div>
+
+            <div class="card card-blue">
+              <img
+                src="./assets/images/logo-BBVA.svg"
+                alt="BBVA Logo"
+                class="company-logo"
+              />
+              <p>
+                Brinda una garantía al propietario ante las obligaciones
+                contraídas por el inquilino en el alquiler de viviendas
+                particulares, como asi también permite reemplazar o suplir la
+                garantía de un título de propiedad inmueble. Es por esto que
+                actúa favorablemente tanto para el inquilino como para el
+                propietario. La póliza también le otorga al propietario
+                cobertura ante el incumplimiento por parte del inquilino del
+                pago del alquiler, expensas, servicios o impuestos, y también
+                por ocupación indebida.
+              </p>
+              <button>COTIZAR</button>
+            </div>
+            <div class="card card-purple">
+              <img
+                src="./assets/images/logo-GSS.png"
+                alt="Sancor Seguros Logo"
+                class="company-logo"
+              />
+              <p>
+                Contamos con un equipo de Asesores de Seguros altamente
+                capacitado e identificado con nuestra marca, orientado a
+                brindarte soluciones a medida para tu empresa.
+              </p>
+              <button>COTIZAR</button>
+            </div>
           </div>
-          <div class="card card-blue">
-            <img
-              src="./assets/images/logo-BBVA.svg"
-              alt="BBVA Logo"
-              class="company-logo"
-            />
-            <p>
-              Brinda una garantía al propietario ante las obligaciones
-              contraídas por el inquilino en el alquiler de viviendas
-              particulares, como asi también permite reemplazar o suplir la
-              garantía de un título de propiedad inmueble. Es por esto que actúa
-              favorablemente tanto para el inquilino como para el propietario.
-              La póliza también le otorga al propietario cobertura ante el
-              incumplimiento por parte del inquilino del pago del alquiler,
-              expensas, servicios o impuestos, y también por ocupación indebida.
-            </p>
-            <button>COTIZAR</button>
+        </div>
+      </section>
+      <section class="insurance-info" id="services">
+        <h2 class="emphasized-title">Acerca de Seguros de Caución</h2>
+        <p>
+          Los seguros de caución garantizan el cumplimiento de obligaciones en
+          contratos, alquileres y proyectos. Son una garantia de alquiler para
+          vivienda de uso familiar asegurando tranquilidad al propietario y al
+          inquilino
+        </p>
+        <ul>
+          <li>
+            <strong>Obras y Servicios:</strong> Garantías para proyectos
+            públicos y privados.
+          </li>
+          <li>
+            <strong>Alquileres:</strong> Seguridad para propietarios e
+            inquilinos.
+          </li>
+          <li>
+            <strong>Judiciales y Aduaneras:</strong> Cobertura para trámites
+            legales y comerciales.
+          </li>
+        </ul>
+        <h3 class="emphasized-title">Beneficios</h3>
+        <p class="benefits-subtitle">100% claros y sin letra chica</p>
+        <div class="benefits-container">
+          <div class="benefit-card">
+            <h4>Agilidad de otorgamiento</h4>
+            <p>Análisis y respuesta de tu solicitud de forma inmediata.</p>
           </div>
-          <div class="card card-purple">
-            <img
-              src="./assets/images/logo-GSS.png"
-              alt="Sancor Seguros Logo"
-              class="company-logo"
-            />
+          <div class="benefit-card">
+            <h4>Costos competitivos</h4>
             <p>
-              Contamos con un equipo de Asesores de Seguros altamente capacitado
-              e identificado con nuestra marca, orientado a brindarte soluciones
-              a medida para tu empresa.
+              Contamos con los mejores costos del mercado y facilidad de pago.
             </p>
-            <button>COTIZAR</button>
           </div>
+          <div class="benefit-card">
+            <h4>Atención personalizada</h4>
+            <p>Un asesor/a te acompañará en el proceso. Trámite 100% Online.</p>
+          </div>
+        </div>
+        <h3 class="emphasized-title">Requisitos</h3>
+        <ul class="requirements-list">
+          <li>+ DNI emitido en Argentina</li>
+          <li>+ Ingresos demostrables</li>
+          <li>+ Sin antecedentes negativos en el sistema financiero</li>
+          <li>+ Posible información adicional</li>
+        </ul>
+        <p>
+          ¡Cotizá tu seguro de caución de manera rápida y segura con nuestra
+          plataforma online!
+        </p>
+      </section>
+      <section class="contact" id="contact">
+        <h2 class="emphasized-title">Contacto</h2>
+        <form>
+          <input type="text" placeholder="Nombre y apellido" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Teléfono" required />
+          <textarea placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+      <a
+        href="https://wa.me/549XXXXXXXXX"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Contactar por WhatsApp"
+      >
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+      <footer>
+        <p>📍 Mendoza 556, Río Cuarto, Córdoba</p>
+        <div class="footer-icons">
+          <span
+            ><a href="mailto:info@gruposcoppa.com.ar"
+              >📧 info@gruposcoppa.com.ar</a
+            ></span
+          >
+          <span
+            ><a target="_blank" href="http://www.gruposcoppa.com.ar"
+              >🏠 gruposcoppa.com.ar</a
+            ></span
+          >
+          <span
+            ><a href="tel:+54 (0358) 462 3267">📞 +54 (0358) 462 3267</a></span
+          >
+        </div>
+      </footer>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Cotizar Seguro de Alquiler</h2>
+          <form id="cotizacionForm" onsubmit="return calcularSeguro(event)">
+            <label>Nombre y Apellido</label>
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Ingresá Nombre y apellido"
+              required
+            />
+            <label>E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Ingresá tu E-Mail"
+              required
+            />
+            <label>Celular</label>
+            <input
+              type="text"
+              id="telefono"
+              placeholder="Ingresá tu número de celular"
+              required
+            />
+            <label>Monto de su Alquiler</label>
+            <input
+              type="number"
+              id="alquiler"
+              placeholder="Ingresá el Monto del Alquiler ($)"
+              required
+            />
+            <select id="meses" required>
+              <option value="">Duración del contrato</option>
+              <option value="12">12 meses</option>
+              <option value="24">24 meses</option>
+              <option value="36">36 meses</option>
+            </select>
+            <button type="submit">Calcular</button>
+          </form>
+          <div id="resultado" class="resultado"></div>
         </div>
       </div>
-    </section>
-    <section class="insurance-info" id="services">
-      <h2 class="emphasized-title">Acerca de Seguros de Caución</h2>
-      <p>
-        Los seguros de caución garantizan el cumplimiento de obligaciones en
-        contratos, alquileres y proyectos. Son una garantia de alquiler para
-        vivienda de uso familiar asegurando tranquilidad al propietario y al
-        inquilino
-      </p>
-      <ul>
-        <li>
-          <strong>Obras y Servicios:</strong> Garantías para proyectos públicos
-          y privados.
-        </li>
-        <li>
-          <strong>Alquileres:</strong> Seguridad para propietarios e inquilinos.
-        </li>
-        <li>
-          <strong>Judiciales y Aduaneras:</strong> Cobertura para trámites
-          legales y comerciales.
-        </li>
-      </ul>
-      <h3 class="emphasized-title">Beneficios</h3>
-      <p class="benefits-subtitle">100% claros y sin letra chica</p>
-      <div class="benefits-container">
-        <div class="benefit-card">
-          <h4>Agilidad de otorgamiento</h4>
-          <p>Análisis y respuesta de tu solicitud de forma inmediata.</p>
-        </div>
-        <div class="benefit-card">
-          <h4>Costos competitivos</h4>
-          <p>
-            Contamos con los mejores costos del mercado y facilidad de pago.
-          </p>
-        </div>
-        <div class="benefit-card">
-          <h4>Atención personalizada</h4>
-          <p>Un asesor/a te acompañará en el proceso. Trámite 100% Online.</p>
+
+      <div id="popupResultados" class="popup" style="display: none">
+        <div class="popup-content">
+          <span class="close" onclick="closePopupResultados()">&times;</span>
+          <h2>Resultados de Cotización</h2>
+          <div class="cards-container" id="resultCards"></div>
         </div>
       </div>
-      <h3 class="emphasized-title">Requisitos</h3>
-      <ul class="requirements-list">
-        <li>+ DNI emitido en Argentina</li>
-        <li>+ Ingresos demostrables</li>
-        <li>+ Sin antecedentes negativos en el sistema financiero</li>
-        <li>+ Posible información adicional</li>
-      </ul>
-      <p>
-        ¡Cotizá tu seguro de caución de manera rápida y segura con nuestra
-        plataforma online!
-      </p>
-    </section>
-    <section class="contact" id="contact">
-      <h2 class="emphasized-title">Contacto</h2>
-      <form>
-        <input type="text" placeholder="Nombre y apellido" required />
-        <input type="email" placeholder="Email" required />
-        <input type="tel" placeholder="Teléfono" required />
-        <textarea placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-    <a
-      href="https://wa.me/549XXXXXXXXX"
-      class="whatsapp-float"
-      target="_blank"
-      aria-label="Contactar por WhatsApp"
-    >
-      <i class="fa-brands fa-whatsapp"></i>
-    </a>
-    <footer>
-      <p>📍 Mendoza 556, Río Cuarto, Córdoba</p>
-      <div class="footer-icons">
-        <span
-          ><a href="mailto:info@gruposcoppa.com.ar"
-            >📧 info@gruposcoppa.com.ar</a
-          ></span
-        >
-        <span
-          ><a target="_blank" href="http://www.gruposcoppa.com.ar"
-            >🏠 gruposcoppa.com.ar</a
-          ></span
-        >
-        <span
-          ><a href="tel:+54 (0358) 462 3267">📞 +54 (0358) 462 3267</a></span
-        >
-      </div>
-    </footer>
+
+      <script src="scripts.js"></script>
+    </div>
   </body>
 </html>
