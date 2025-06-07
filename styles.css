@@ -155,7 +155,8 @@ img {
 .card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
+  justify-content: start;
   color: #333;
   padding: 20px;
   border-radius: 8px;
@@ -178,7 +179,7 @@ img {
   margin: 1rem 0;
 }
 
-.card button {
+.overlay button {
   background-color: var(--color4);
   color: var(--color1);
   border: none;
@@ -190,7 +191,7 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.card button:hover {
+.overlay button:hover {
   background-color: var(--color3);
 }
 
