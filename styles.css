@@ -1,12 +1,12 @@
 /* Variables de color */
 :root {
-  --color1: #1f192f; /* fondo principal */
-  --color2: #2d6073; /* acento oscuro */
-  --color3: #65b8a6; /* acento medio */
-  --color4: #b5e8c3; /* detalles y hover */
-  --color5: #f0f7da; /* fondo claro / texto secundario */
-  --font-main: "Lora", serif;
-  --font-alt: "Open Sans", sans-serif;
+  --color1: #00233B; /* fondo principal */
+  --color2: #0067B0; /* acento oscuro */
+  --color3: #0093CC; /* acento medio */
+  --color4: #00A4E3; /* detalles y hover */
+  --color5: #FFFFFA; /* fondo claro / texto secundario */
+  --font-alt: "Lora", serif;
+  --font-main: "Open Sans", sans-serif;
 }
 
 /* Reset básico */
@@ -38,15 +38,17 @@ body {
 
 /* Encabezado */
 header {
-  background-color: var(--color2);
-  padding: 1rem 0;
+  background-color: var(--color5);
   text-align: center;
-  color: var(--color5);
+
+  /* centra horizontal el logo */
+  display: flex;
+  justify-content: center;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
+header img {
+  width: 350px;
+  height: auto;
 }
 
 /* Navegación */
@@ -55,12 +57,12 @@ nav {
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  background-color: var(--color3);
+  background-color: var(--color5);
   padding: 1rem;
 }
 
-nav a {
-  color: var(--color1);
+/* nav a {
+  color: red;
   text-decoration: none;
   font-weight: bold;
   transition: color 0.3s ease;
@@ -68,7 +70,7 @@ nav a {
 
 nav a:hover {
   color: var(--color4);
-}
+} */
 
 /* Secciones */
 section {
@@ -78,38 +80,14 @@ section {
 section h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: var(--color4);
+  color: var(--color5);
 }
 
 section p {
-  font-size: 1rem;
-  max-width: 700px;
+  font-size: 20px;
+  /* max-width: 700px; /*problema de marti */
 }
 
-/* Botones */
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  background-color: var(--color3);
-  color: var(--color1);
-  border: none;
-  border-radius: 8px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-  background-color: var(--color4);
-}
-
-/* Footer */
-footer {
-  background-color: var(--color2);
-  color: var(--color5);
-  text-align: center;
-  padding: 1rem;
-}
 
 /* Responsive Grid */
 .grid {
@@ -121,8 +99,8 @@ footer {
 img {
   width: 100%;
   height: auto;
-  border-radius: 8px;
 }
+
 /* HERO SECTION */
 .hero {
   background: url("./assets/images/bg.jpg") center/cover no-repeat;
@@ -153,13 +131,13 @@ img {
 }
 
 .card {
-  display: flex;
+  /*display: flex;*/
   flex-direction: column;
   justify-content: space-between;
-  color: #333;
+  color: var(--color5);
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   flex: 1;
   min-width: 250px;
   max-width: 350px;
@@ -178,11 +156,11 @@ img {
   margin: 1rem 0;
 }
 
-.card button {
-  background-color: var(--color4);
+.overlay button {
+  background-color: var(--color2);
   color: var(--color1);
   border: none;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5cm 2.2cm;
   margin-top: 1rem;
   cursor: pointer;
   font-weight: bold;
@@ -190,7 +168,7 @@ img {
   transition: background-color 0.3s ease;
 }
 
-.card button:hover {
+.overlay button:hover {
   background-color: var(--color3);
 }
 
@@ -348,19 +326,42 @@ img {
 
 /* INSURANCE INFO */
 .insurance-info {
-  padding: 3rem 1rem;
+  text-align: center;
+  padding: 0cm 1.5cm; /* top, right, bottom, left */
+}
+
+.insurance-info p {
+  text-align: center;
 }
 
 .insurance-info ul {
   margin: 1rem 0;
   list-style-type: disc;
+  list-style-position: inside;
   padding-left: 1.5rem;
 }
 
 .emphasized-title {
   font-size: 1.8rem;
   color: var(--color4);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
 }
 
 .benefits-container {
@@ -375,15 +376,6 @@ img {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-}
-
-.requirements-list {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-.requirements-list li {
-  margin-bottom: 0.5rem;
 }
 
 /* CONTACTO */
