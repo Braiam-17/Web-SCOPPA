@@ -85,7 +85,6 @@ section h2 {
 
 section p {
   font-size: 20px;
-  /* max-width: 700px; /*problema de marti */
 }
 
 
@@ -266,6 +265,7 @@ img {
   margin: 1rem 0 0.5rem;
   color: #333;
   font-size: 1.2rem;
+
 }
 
 .popup .card p {
@@ -326,7 +326,9 @@ img {
 
 /* INSURANCE INFO */
 .insurance-info {
-  text-align: center;
+
+}
+
   padding: 0cm 1.5cm; /* top, right, bottom, left */
 }
 
@@ -337,7 +339,7 @@ img {
 .insurance-info ul {
   margin: 1rem 0;
   list-style-type: disc;
-  list-style-position: inside;
+
   padding-left: 1.5rem;
 }
 
@@ -346,22 +348,6 @@ img {
   color: var(--color4);
   margin-bottom: 1.5rem;
   text-align: center;
-}
-
-.about-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.list {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-.list li {
-  margin-bottom: 0.5rem;
 }
 
 .benefits-container {
@@ -376,6 +362,16 @@ img {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
+}
+
+.requirements-list {
+  margin-top: 1rem;
+  padding-left: 1.5rem;
+}
+
+
+.requirements-list li {
+  margin-bottom: 0.5rem;
 }
 
 /* CONTACTO */
