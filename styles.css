@@ -85,7 +85,6 @@ section h2 {
 
 section p {
   font-size: 20px;
-  max-width: 700px;
 }
 
 
@@ -266,6 +265,7 @@ img {
   margin: 1rem 0 0.5rem;
   color: #333;
   font-size: 1.2rem;
+
 }
 
 .popup .card p {
@@ -326,6 +326,9 @@ img {
 
 /* INSURANCE INFO */
 .insurance-info {
+
+}
+
   padding: 0cm 1.5cm; /* top, right, bottom, left */
 }
 
@@ -336,6 +339,7 @@ img {
 .insurance-info ul {
   margin: 1rem 0;
   list-style-type: disc;
+
   padding-left: 1.5rem;
 }
 
@@ -364,6 +368,7 @@ img {
   margin-top: 1rem;
   padding-left: 1.5rem;
 }
+
 
 .requirements-list li {
   margin-bottom: 0.5rem;
