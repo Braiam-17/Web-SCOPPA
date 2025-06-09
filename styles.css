@@ -217,6 +217,7 @@ img {
   padding: 0.75rem;
   border-radius: 5px;
   border: none;
+  /* resize: none; */
 }
 
 .popup-content button {
@@ -431,6 +432,7 @@ img {
   padding: 0.75rem;
   border: none;
   border-radius: 5px;
+  resize: none;
 }
 
 .contact button {
@@ -449,6 +451,7 @@ img {
 
 /* WHATSAPP FLOAT */
 .whatsapp-float {
+  text-decoration: none;
   position: fixed;
   bottom: 20px;
   right: 20px;
