@@ -387,7 +387,6 @@ img {
 
 .list-container {
   display: flex;
-  felx-direction: column;
   justify-content: center;
 }
 
