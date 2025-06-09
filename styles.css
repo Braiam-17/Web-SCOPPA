@@ -363,12 +363,20 @@ img {
   text-align: center;
 }
 
-.requirements-list {
-  margin-top: 1rem;
+.list-container {
+  display: flex;
+  felx-direction: column;
+  justify-content: center;
+}
+
+.list {
+  max-width: fit-content;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
   padding-left: 1.5rem;
 }
 
-.requirements-list li {
+.list li {
   margin-bottom: 0.5rem;
 }
 
