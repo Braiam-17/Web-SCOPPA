@@ -103,7 +103,7 @@ img {
 /* HERO SECTION */
 .hero {
   background: url("./assets/images/bg.jpg") center/cover no-repeat;
-  padding: 4rem 1rem;
+  padding: 2rem 1rem 0.3rem;
   position: relative;
   text-align: center;
 }
@@ -326,27 +326,26 @@ img {
 
 /* INSURANCE INFO */
 .insurance-info {
-
-}
-
   padding: 0cm 1.5cm; /* top, right, bottom, left */
 }
 
 .insurance-info p {
   text-align: center;
+  font-size: 1.25rem;
 }
 
 .insurance-info ul {
   margin: 1rem 0;
   list-style-type: disc;
-
   padding-left: 1.5rem;
+  font-size: 1.25rem;
 }
 
 .emphasized-title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--color4);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.2cm;
+  margin-top: 0.8cm;
   text-align: center;
 }
 
@@ -354,7 +353,7 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 
 .benefit-card {
@@ -369,16 +368,25 @@ img {
   padding-left: 1.5rem;
 }
 
-
 .requirements-list li {
   margin-bottom: 0.5rem;
 }
 
+.renglon {
+  margin: 1.5rem;
+}
 /* CONTACTO */
 .contact {
-  padding: 3rem 1rem;
+  padding: 1.75rem 1rem 3rem;
   background-color: var(--color2);
   border-top: 2px solid var(--color4);
+}
+
+.contact h3{
+  font-size: 1.6rem;
+  color: var(--color4);
+  text-align: center;
+  margin-bottom: 0.4cm;
 }
 
 .contact form {
@@ -438,6 +446,12 @@ footer {
   color: var(--color1);
 }
 
+footer a {
+    color: var(--color1);
+    text-decoration: none;
+    transition: font-weight 0.1s ease;
+    font-weight: 600;
+}
 .footer-icons {
   display: flex;
   flex-direction: column;
@@ -449,10 +463,10 @@ footer {
   color: var(--color1);
   text-decoration: none;
 }
-
-.footer-icons a:hover {
-  text-decoration: underline;
+footer a:hover {
+  color: var(--color5);
 }
+
 
 /* MEDIA QUERIES */
 @media (min-width: 500px) {
