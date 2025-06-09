@@ -326,14 +326,12 @@ img {
 
 /* INSURANCE INFO */
 .insurance-info {
-
-}
-
   padding: 0cm 1.5cm; /* top, right, bottom, left */
 }
 
 .insurance-info p {
   text-align: center;
+  margin-bottom: 1em;
 }
 
 .insurance-info ul {
@@ -346,8 +344,25 @@ img {
 .emphasized-title {
   font-size: 1.8rem;
   color: var(--color4);
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 0;
   text-align: center;
+}
+
+.list-container {
+  display: flex;
+  felx-direction: column;
+  justify-content: center;
+}
+
+.list {
+  max-width: fit-content;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
 }
 
 .benefits-container {
@@ -364,14 +379,8 @@ img {
   text-align: center;
 }
 
-.requirements-list {
-  margin-top: 1rem;
-  padding-left: 1.5rem;
-}
-
-
-.requirements-list li {
-  margin-bottom: 0.5rem;
+.benefit-card h4 {
+  margin-bottom: 0.2em;
 }
 
 /* CONTACTO */
