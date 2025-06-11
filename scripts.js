@@ -20,13 +20,34 @@ function calcularSeguro(event) {
 
   const alquiler = parseFloat(document.getElementById("alquiler").value);
   const meses = parseInt(document.getElementById("meses").value);
+  const tipo = document.getElementById("tipo").value;
 
-  if (!alquiler || !meses) return;
+  if (!alquiler || !meses || !tipo) return;
 
   const nombre = document.getElementById("nombre").value;
   const telefono = document.getElementById("telefono").value;
 
   const sumaAsegurada = alquiler * meses;
+
+  if (tipo == "comercial") {
+    // derivar al wsp
+    let cardsHTML = `
+      <div class="card card-green">
+        <p>Para continuar con la cotización, te invitamos a que con contactes por WhatsApp.</p>
+        <button class="whatsapp-btn" onclick="derivarWhatsApp()">
+          <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
+        </button>
+      </div>
+    `;
+
+    document.getElementById("resultCards").innerHTML = cardsHTML;
+
+    // Cerrar el popup de cotización y mostrar el de resultados
+    document.getElementById("popup").style.display = "none";
+    document.getElementById("popupResultados").style.display = "flex";
+
+    return;
+  }
 
   // Calcular para Triunfo Seguros
   // Corregido: 12 meses = 1.5%, 24 meses = 3%, 36 meses = 4.5%
@@ -142,6 +163,34 @@ function enviarWhatsApp(compania, costo, cuotaMensual) {
   *Cotización seleccionada:*
   • Costo total: ${costo.toLocaleString()} (contado)
   • 3 cuotas sin interés: ${cuotaMensual.toLocaleString()} c/u
+  
+  ¿Podrían contactarme para continuar con el trámite?
+  
+  ¡Gracias!`;
+
+  // Número de WhatsApp de Grupo Scoppa - cambiar por el número real
+  const whatsappUrl = `https://wa.me/5493584623267?text=${encodeURIComponent(
+    mensaje
+  )}`;
+  window.open(whatsappUrl, "_blank");
+}
+
+// Agregar funcionalidad para derivar por WhatsApp si elige comercial
+function derivarWhatsApp() {
+  const nombre = document.getElementById("nombre").value;
+  const email = document.getElementById("email").value;
+  const telefono = document.getElementById("telefono").value;
+  const alquiler = document.getElementById("alquiler").value;
+  const meses = document.getElementById("meses").value;
+
+  const mensaje = `¡Hola! Me interesa contratar un seguro de caución *comercial*.
+  
+  *Mis datos:*
+  • Nombre: ${nombre}
+  • Email: ${email}
+  • Teléfono: ${telefono}
+  • Monto de alquiler: ${parseFloat(alquiler).toLocaleString()}
+  • Duración del contrato: ${meses} meses
   
   ¿Podrían contactarme para continuar con el trámite?
   
