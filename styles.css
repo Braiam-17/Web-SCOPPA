@@ -344,23 +344,6 @@ img {
   background-color: var(--Azul1);
 }
 
-.list-container {
-  display: flex;
-  felx-direction: column;
-  justify-content: center;
-}
-
-.list {
-  max-width: fit-content;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-
-.list li {
-  margin-bottom: 0.5rem;
-}
-
 .benefits-container {
   display: flex;
   flex-direction: column;
@@ -382,7 +365,7 @@ img {
 
 .list-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
 }
 
