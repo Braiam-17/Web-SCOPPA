@@ -1,3 +1,5 @@
+const wsp_oficina_clientes = "5493585024891";
+
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
 }
@@ -169,7 +171,7 @@ function enviarWhatsApp(compania, costo, cuotaMensual) {
   ¡Gracias!`;
 
   // Número de WhatsApp de Grupo Scoppa - cambiar por el número real
-  const whatsappUrl = `https://wa.me/5493584623267?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${wsp_oficina_clientes}?text=${encodeURIComponent(
     mensaje
   )}`;
   window.open(whatsappUrl, "_blank");
@@ -197,7 +199,7 @@ function derivarWhatsApp() {
   ¡Gracias!`;
 
   // Número de WhatsApp de Grupo Scoppa - cambiar por el número real
-  const whatsappUrl = `https://wa.me/5493584623267?text=${encodeURIComponent(
+  const whatsappUrl = `https://wa.me/${wsp_oficina_clientes}?text=${encodeURIComponent(
     mensaje
   )}`;
   window.open(whatsappUrl, "_blank");
