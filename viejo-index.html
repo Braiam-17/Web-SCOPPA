@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grupo Scoppa</title>
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Esto mejora la carga anticipando conexiones -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Este es el enlace a la fuente Montserrat y Merriweather -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <script src="scripts.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="./assets/images/Logo GS 2.png"
+            width="50"
+            height="75"
+            alt="Grupo Scoppa Logo"
+          />
+        </div>
+        <div class="menu-abrir" id="menu-abir">&#9776;</div>
+        <div class="nav" id="nav">
+          <div class="menu-cerrar" id="menu-cerrar">&#9776;</div>
+          <div class="nav-links" id="nav-links">
+            <a href="#home">Inicio</a>
+            <a href="#services">Servicios</a>
+            <a href="#contact">Contacto</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div>
+      <section class="hero" id="home">
+        <div class="overlay">
+          <div><h2>Cotizá tu Seguro de Caución</h2></div>
+
+          <div class="cards-container">
+            <div class="card card-green">
+              <img
+                src="./assets/images/logo-TS.png"
+                alt="Triunfo Seguros Logo"
+                class="company-logo"
+              />
+              <p>
+                El Seguro de Caución se emite para asegurar el cumplimiento en tiempo 
+                y forma de una obligación que surge de la firma de un contrato, 
+                cuando el Beneficiario de dicha obligación deja expresado en el mismo que el Tomador 
+                (o sujeto obligado) garantice el cumplimiento..
+              </p>
+            </div>
+
+            <div class="card card-blue">
+              <img
+                src="./assets/images/logo-BBVA.svg"
+                alt="BBVA Logo"
+                class="company-logo"
+              />
+              <p>
+                Este seguro brinda una garantía al propietario ante las obligaciones del inquilino en el alquiler de viviendas particulares, 
+                como así también permite reemplazar o suplir la garantía de un título de propiedad inmueble, 
+                que se suele solicitar al momento de la firma del contrato.
+              </p>
+
+            </div>
+
+            <div class="card card-purple">
+              <img
+                src="./assets/images/logo-GSS.png"
+                alt="Sancor Seguros Logo"
+                class="company-logo"
+              />
+              <p>
+                El seguro de caución de alquiler es una garantía de alquiler para vivienda de uso familiar, 
+                asegurando tranquilidad al propietario y al inquilino.
+              </p>
+              
+            </div>
+
+          </div>
+
+          <button onclick="openPopup()">COTIZAR</button>
+        </div>
+      </section>
+
+      <section class="insurance-info" id="services">
+        <div class="about-container">
+          <h2 class="emphasized-title">Acerca de Seguros de Caución</h2>
+
+          <p>
+          Los seguros de caución garantizan el cumplimiento de obligaciones en contratos, alquileres y proyectos.
+          Son una garantía de alquiler para vivienda de uso familiar asegurando tranquilidad al propietario y al inquilino.
+          </p>
+
+          <div class="list-container">
+            <div class="list">
+              <ul>
+                <li><strong>Obras y Servicios:</strong> Garantías para proyectos públicos y privados.</li>
+                <li><strong>Alquileres:</strong> Seguridad para propietarios e inquilinos.</li>
+                <li><strong>Judiciales y Aduaneras:</strong> Cobertura para trámites legales y comerciales.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="emphasized-title">Beneficios</h2>
+        <p>100% claros y sin letra chica</p>
+        <div class="benefits-container">
+          <div class="benefit-card">
+            <h4>Agilidad de otorgamiento</h4>
+            <p>Análisis y respuesta de tu solicitud de forma inmediata.</p>
+          </div>
+
+          <div class="benefit-card">
+            <h4>Costos competitivos</h4>
+            <p>
+              Contamos con los mejores costos del mercado y facilidad de pago.
+            </p>
+          </div>
+          <div class="benefit-card">
+            <h4>Atención personalizada</h4>
+            <p>Un asesor/a te acompañará en el proceso. Trámite 100% Online.</p>
+          </div>
+        </div>
+
+        <h2 class="emphasized-title">Requisitos</h3>
+        <div class="list-container">
+          <div class="list">
+            <ul>
+              <li>DNI emitido en Argentina</li>
+              <li>Ingresos demostrables</li>
+              <li>Sin antecedentes negativos en el sistema financiero</li>
+              <li>Posible información adicional</li>
+            </ul>
+          </div>
+        </div>
+        <p class="renglon"><b> 
+          ¡Cotizá tu seguro de caución de manera rápida y segura con nuestra
+          plataforma online!
+        </b></p>
+      </section>
+
+      <section class="contact" id="contact">
+        <h3>Contacto</h3>
+        <form>
+          <input type="text" placeholder="Nombre y apellido" required />
+          <input type="email" placeholder="Email" required />
+          <input type="tel" placeholder="Teléfono" required />
+          <textarea rows="4" placeholder="Mensaje" required></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+
+      <a href="https://wa.me/5493585024891?text=¡Hola! ¿Me podrían dar más información?" target="_blank" class="whatsapp-float">
+        <img src="assets\images\whatsapp.png" alt="WhatsApp">
+      </a>
+
+      <footer>
+        <a href="https://maps.app.goo.gl/CydH5jNz1qAMTF5V9" target="_blank">📍 Mendoza 556, Río Cuarto, Córdoba</a>
+        <div class="footer-icons">
+          <span
+            ><a href="mailto:info@gruposcoppa.com.ar"
+              >📧 info@gruposcoppa.com.ar</a
+            ></span
+          >
+          <span
+            ><a target="_blank" href="http://www.gruposcoppa.com.ar"
+              >🏠 gruposcoppa.com.ar</a
+            ></span
+          >
+          <span
+            ><a href="tel:+54 9 358 502 4891">📞 +54 9 358 502 4891</a></span
+          >
+        </div>
+      </footer>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="closePopup()">&times;</span>
+          <h2>Cotizar Seguro de Alquiler</h2>
+          <form id="cotizacionForm" onsubmit="return calcularSeguro(event)">
+            <label>Nombre y Apellido</label>
+            <input
+              type="text"
+              id="nombre"
+              placeholder="Ingresá Nombre y apellido"
+              required
+            />
+            <label>E-Mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Ingresá tu E-Mail"
+              required
+            />
+            <label>Celular</label>
+            <input
+              type="text"
+              id="telefono"
+              placeholder="Ingresá tu número de celular"
+              required
+            />
+            <label>Monto de su Alquiler</label>
+            <input
+              type="number"
+              id="alquiler"
+              placeholder="Ingresá el Monto del Alquiler ($)"
+              required
+            />
+            <select id="meses" required>
+              <option value="">Duración del contrato</option>
+              <option value="12">12 meses</option>
+              <option value="24">24 meses</option>
+              <option value="36">36 meses</option>
+            </select>
+            <select id="tipo" required>
+              <option value="">Tipo de contrato</option>
+              <option value="particular">Particular</option>
+              <option value="comercial">Comercial</option>
+            </select>
+            <button type="submit">Calcular</button>
+          </form>
+          <div id="resultado" class="resultado"></div>
+        </div>
+      </div>
+
+      <div id="popupResultados" class="popup" style="display: none">
+        <div class="popup-content">
+          <span class="close" onclick="closePopupResultados()">&times;</span>
+          <h2>Resultados de Cotización</h2>
+          <div class="cards-container" id="resultCards"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

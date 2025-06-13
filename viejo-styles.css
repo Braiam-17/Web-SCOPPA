@@ -1,0 +1,599 @@
+/* Variables de color */
+:root {
+  --Azul1:      #003E57;
+  --Azul2:      #005B80;
+  --Turquesa1:  #0079A8; 
+  --Turquesa2:  #0092CC;
+  --Turquesa3:  #00B3FA;
+  --Blanco:     #fffffa;
+  --font-main: "Montserrat";
+  --font-title:"Merriweather";
+}
+
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--Blanco);
+  color: var(--Azul1);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+/* Layout responsive */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Encabezado */
+header {
+  background-color: var(--Blanco);
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: center; */
+}
+
+header img {
+  width: 350px;
+  height: auto;
+}
+
+/* Navegación */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--Blanco);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  display: block;
+}
+
+.menu-abrir,
+.menu-cerrar {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--Turquesa1);
+}
+
+/* Secciones */
+section {
+  padding: 3rem 0;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: var(--Blanco);
+}
+
+section p {
+  font-size: 20px;
+}
+
+/* Responsive Grid */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+/* Imágenes responsivas */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* HERO SECTION */
+.hero {
+
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
+  padding: 1rem 1rem 1rem;
+  position: relative;
+
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(30, 30, 30, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(5px);
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* CARDS */
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  /*display: flex;*/
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--Blanco);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  min-width: 250px;
+  max-width: 350px;
+  text-align: center;
+  /*background: rgba(255, 255, 255, 0.1);*/
+  box-shadow: 0 4px 10px rgb(0, 0, 0, 0.50);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card img.company-logo {
+  width: 100%; /* Asegura el ancho completo */
+  height: 100px; /* Altura estándar para todas las imágenes */
+  object-fit: contain; /* O 'cover' si prefieres recorte en lugar de ajuste */
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  margin: 1rem 0;
+}
+
+.overlay button {
+  background-color: var(--Turquesa1);
+  color: var(--Blanco);
+  border: none;
+  padding: 0.5cm 2.2cm;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+  background-color: var(--Azul2);
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: var(--Azul2);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  overflow-y: auto;
+  color: var(--Blanco);
+}
+
+/* Popup de resultados necesita ser más ancho */
+#popupResultados .popup-content {
+  max-width: 1000px;
+  width: 95%;
+}
+
+.popup-content h2 {
+  margin-bottom: 1rem;
+  color: var(--Blanco);
+  text-align: center;
+}
+
+.popup-content input,
+.popup-content select,
+.popup-content button,
+.popup-content textarea {
+  display: block;
+  width: 100%;
+  margin: 0.5rem 0 1rem;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: none;
+  /* resize: none; */
+}
+
+.popup-content button {
+  background-color: var(--Turquesa1);
+  color: var(--Blanco);
+  font-weight: bold;
+}
+
+.popup-content button:hover {
+  background-color: var(--Azul1);
+  cursor: pointer;
+}
+
+.close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--Blanco);
+  margin-bottom: 1rem;
+}
+
+.close:hover {
+  color: var(--Azul1);
+}
+
+/* Estilos para las tarjetas dentro del popup de resultados */
+.popup .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.popup .card {
+  background: whitesmoke;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.20);
+  min-width: 280px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.popup .card h4 {
+  margin: 1rem 0 0.5rem;
+  color: #333;
+  font-size: 1.25rem;
+
+}
+
+.popup .card p {
+  margin: 0.5rem 0;
+  color: rgb(50, 50, 50);
+  line-height: 1.4;
+}
+
+.popup .card p strong {
+  color: #333;
+}
+
+.popup .card em {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.popup .card-green {
+  border-left: 4px solid #4caf50;
+}
+
+.popup .card-blue {
+  border-left: 4px solid #2196f3;
+}
+
+.popup .card-purple {
+  border-left: 4px solid #9c27b0;
+}
+
+.popup .company-logo {
+  max-width: 120px;
+  max-height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+/* INSURANCE INFO */
+.insurance-info {
+  padding: 0cm 1.5cm; /* top, right, bottom, left */
+}
+
+.insurance-info p {
+  text-align: center;
+  margin-bottom: 1em;
+  font-size: 1.25rem;
+}
+
+.insurance-info ul {
+  margin: 1rem 0;
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.emphasized-title {
+  font-size: 1.6rem;
+  color: var(--Blanco);
+  margin-bottom: 0.2cm;
+  margin-top: 0.8cm;
+  text-align: center;
+  background-color: var(--Azul1);
+}
+
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 1rem 0;
+}
+
+.benefit-card {
+  background-color: var(--Azul2);
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 4px 4px 10px rgb(0, 0, 0, 0.30);
+}
+
+.benefit-card h4 {
+  margin-bottom: 0.2em;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.list {
+  max-width: fit-content;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.list li {
+  margin-bottom: 0.5rem;
+}
+
+.renglon {
+  margin: 1.5rem;
+}
+/* CONTACTO */
+.contact {
+  padding: 1.75rem 1rem 3rem;
+  background-color: var(--Turquesa1);
+  border-top: 2px solid var(--Turquesa2);
+  border-bottom: 2px solid var(--Turquesa2);
+}
+
+.contact h3{
+  font-size: 1.6rem;
+  color: var(--Azul1);
+  text-align: center;
+  margin-bottom: 0.4cm;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+.contact textarea {
+    resize: none;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  font-family: var(--font-main)
+}
+
+.contact button {
+  padding: 0.75rem;
+  background-color: var(--Turquesa2);
+  color: var(--Azul1);
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 120px;
+  margin: 0 auto;
+}
+
+.contact button:hover {
+  background-color: var(--Azul2);
+  color: var(--Blanco);
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  text-decoration: none;
+  position: fixed;
+  bottom: 0.5cm; /* distancia desde abajo */
+  right: 1cm;  /* distancia desde la derecha */
+  z-index: 1000; /* para que quede siempre visible arriba de todo */
+}
+
+.whatsapp-float img {
+  width: 62px;  /* tamaño pequeño */
+  height: 62px;
+  border-radius: 50%; /* redondeado (opcional, podés sacar esta línea si no querés redondeo) */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* sombra sutil (opcional) */
+  transition: transform 5s ease-in-out; /* animación al pasar el mouse */
+}
+
+.whatsapp-float:hover{
+  transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--color3);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--color1);
+}
+
+footer a {
+    color: var(--color1);
+    text-decoration: none;
+    transition: font-weight 0.1s ease;
+    font-weight: 600;
+}
+.footer-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.footer-icons a {
+  color: var(--color1);
+  text-decoration: none;
+}
+footer a:hover {
+  color: var(--color5);
+}
+
+/*MEDIA QUERIES*/
+@media (min-width: 500px) {
+  .cards-container {
+    flex-direction: row;
+  }
+
+  .card {
+    text-align: center;
+  }
+
+  .benefits-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .benefit-card {
+    flex: 1;
+  }
+
+  .footer-icons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+}
+
+/* --- Responsive --- */
+/* Responsive para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+  .menu-abrir,
+  .menu-cerrar {
+    display: block;
+  }
+
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--Blanco);
+    padding: 2rem;
+    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+  }
+
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav-links {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 1.2rem;
+  }
+
+  .popup-content {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  #popupResultados .popup-content {
+    max-width: 95%;
+  }
+
+  .popup .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .popup .card {
+    max-width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    height: 70px;
+    justify-content: end;
+  }
+  .logo {
+    display: none;
+  }
+
+}

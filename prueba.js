@@ -76,7 +76,6 @@ function calcularSeguro(event) {
           <img src="./assets/images/logo-TS.png" alt="Triunfo Seguros Logo" class="company-logo" />
           <h4>Triunfo Seguros</h4>
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
-          <p><strong>Tasa aplicada:</strong> ${tasaTriunfo * 100}%</p>
           <p><strong>Contado:</strong> ${costoTriunfo.toLocaleString()}</p>
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
             costoTriunfo / 3
@@ -92,7 +91,6 @@ function calcularSeguro(event) {
           <img src="./assets/images/logo-BBVA.svg" alt="BBVA Logo" class="company-logo" />
           <h4>BBVA</h4>
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
-          <p><strong>Tasa aplicada:</strong> 5%</p>
           <p><strong>Contado:</strong> ${costoBBVA.toLocaleString()}</p>
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
             costoBBVA / 3
@@ -112,7 +110,6 @@ function calcularSeguro(event) {
             <img src="./assets/images/logo-GSS.png" alt="Sancor Seguros Logo" class="company-logo" />
             <h4>Sancor Seguros</h4>
             <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
-            <p><strong>Tasa aplicada:</strong> 5.5%</p>
             <p><strong>Contado:</strong> ${costoSancor.toLocaleString()}</p>
             <p><strong>3 cuotas sin interés:</strong> ${Math.round(
               costoSancor / 3
