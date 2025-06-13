@@ -1,4 +1,23 @@
 const wsp_oficina_clientes = "5493585024891";
+const abrirMenu = document.querySelector("#menu-abir");
+const cerrarMenu = document.querySelector("#menu-cerrar");
+const nav = document.querySelector("#nav");
+const navLinks = document.querySelectorAll("a");
+
+abrirMenu.addEventListener('click', () => {
+  nav.classList.add('visible');
+});
+
+cerrarMenu.addEventListener('click', () => {
+  nav.classList.remove('visible');
+});
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    // ocultar menu desplegado
+    nav.classList.remove('visible');
+  })
+});
 
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
