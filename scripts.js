@@ -1,6 +1,7 @@
 const wsp_oficina_clientes = "5493585024891";
 const abrirMenu = document.querySelector("#menu-abir");
 const cerrarMenu = document.querySelector("#menu-cerrar");
+const navbar = document.querySelector("#navbar");
 const nav = document.querySelector("#nav");
 const navLinks = document.querySelectorAll("a");
 

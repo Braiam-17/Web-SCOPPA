@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Grupo Scoppa</title>
 
     <link rel="stylesheet" href="styles.css" />
 
@@ -20,6 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap"
       rel="stylesheet"
     />
+    <script src="scripts.js" defer></script>
   </head>
   <body>
     <a href="https://wa.link/ebwxlr" target="_blank" class="whatsapp-float">
@@ -34,15 +35,20 @@
         height="75"
         width="50"
       />
-
-      <nav>
-        <ul>
-          <li><a href="#Inicio">Inicio</a></li>
-          <li><a href="#Cotizar">Cotizar</a></li>
-          <li><a href="#Beneficios-Requisitos">Beneficios</a></li>
-          <li><a href="#Beneficios-Requisitos">Requisitos</a></li>
-          <li><a href="#Contacto">Contacto</a></li>
-        </ul>
+      <nav class="navbar">
+        <div class="menu-abrir" id="menu-abir">&#9776;</div>
+        <div class="nav" id="nav">
+          <div class="menu-cerrar" id="menu-cerrar">&#9776;</div>
+          <div class="nav-links" id="nav-links">
+            <ul>
+              <li><a href="#Inicio">Inicio</a></li>
+              <li><a href="#Cotizar">Cotizar</a></li>
+              <li><a href="#Beneficios-Requisitos">Beneficios</a></li>
+              <li><a href="#Beneficios-Requisitos">Requisitos</a></li>
+              <li><a href="#Contacto">Contacto</a></li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
@@ -271,6 +277,6 @@
       </div>
     </footer>
 
-    <script src="prueba.js"></script>
+    <!-- <script src="prueba.js"></script> -->
   </body>
 </html>
