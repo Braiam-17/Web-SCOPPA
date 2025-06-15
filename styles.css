@@ -125,26 +125,29 @@ header {
   height: 651px;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
-  padding: 1rem 1rem 1rem;
+  /* padding: 1rem 1rem 1rem; */
+  padding: 2rem;
+  padding-bottom: 0;
   position: relative;
   text-align: left;
   margin-top: 115px;
   color: var(--Blanco);
   overflow: hidden;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .contenido-inicio {
-  position: relative;
-  bottom: 25px; /* distancia desde abajo */
-  left: 30px; /* distancia desde la izquierda */
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: auto auto;
   gap: 3rem; /* espacio entre columnas */
   max-width: 1300px;
   margin: 0 auto;
   padding: 0.5cm;
+}
+
+.contenido-inicio div {
+  padding: 1em;
 }
 
 .seccion-inicio h1 {
@@ -156,6 +159,12 @@ header {
 .seccion-inicio em {
   font-style: italic;
   font-weight: bold;
+}
+
+.columna-derecha {
+  display: flex;
+  justify-content: center;
+  align-items: end;
 }
 
 .columna-izquierda {
@@ -175,6 +184,11 @@ header {
   text-align: left;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  padding-bottom: 0.2em;
+}
+
+.columna-derecha li {
+  padding-top: 1.5em;
 }
 
 /*Cotizar*/
@@ -199,7 +213,7 @@ header {
 /* CARDS */
 .cards-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -414,7 +428,7 @@ header {
   border-right: none;
 }
 
-.columna-iz,
+.columna-izq,
 .columna-der {
   flex: 1;
 }
@@ -557,6 +571,32 @@ h4 {
     gap: 1.2rem;
   }
 
+  /*Inicio*/
+  .contenido-inicio {
+    grid-template-columns: auto;
+    gap: 0.1em;
+    padding-top: 2rem;
+  }
+
+  .columna-izquierda {
+    max-width: 100%;
+  }
+
+  .columna-izquierda p {
+    margin-bottom: 0;
+  }
+
+  .columna-derecha ul {
+    /* line-height: 1.7; */
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .columna-derecha li {
+    padding-top: 0;
+  }
+  
+  /*PopUp*/
   .popup-content {
     padding: 1rem;
     width: 95%;
@@ -577,11 +617,23 @@ h4 {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 642px) {
   header {
+    width: 100vw;
     justify-content: end;
+    height: 60px;
   }
   #logo {
     display: none;
+  }
+  .seccion-inicio {
+    height: auto;
+    margin-top: 45px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  header {
+    margin-right: 70px;
   }
 }
