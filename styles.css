@@ -60,6 +60,7 @@ header {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   display: flex; /*para que sus elementos esten horizontal*/
   position: fixed; /* Fija el elemento en una posición específica de la ventana del navegador, incluso durante el desplazamiento. */
+  justify-content: space-between;
   top: 0; /* pone al elemento en el borde superior de la pagina */
   z-index: 12;
 }
