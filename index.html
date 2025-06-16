@@ -242,12 +242,21 @@
     <section id="Contacto" class="contacto">
       <h5><i class="fas fa-envelope"></i> Contacto</h5>
       <!-- FormSumbit para el prototipo -->
-      <form action="https://formsubmit.co/tobiasvidelaug14@gmail.com" method="POST" id="contact-form">
-        <input type="text" placeholder="Nombre y apellido" required />
-        <input type="email" placeholder="Email" required />
-        <input type="tel" placeholder="Teléfono" required />
-        <textarea rows="4" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
+      <form id="contact-form" action="https://formsubmit.co/tobiavidelaug14@gmail.com" method="POST">
+        <!-- Datos a enviar -->
+        <input type="text" name="nombre" placeholder="Nombre y apellido" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" name="telefono" placeholder="Teléfono" required />
+        <textarea rows="4" name="mensaje" placeholder="Mensaje" required></textarea>
+
+        <!-- Quitar el captcha para las pruebas -->
+        <input type="hidden" name="_captcha" value="false">
+        <!-- Redirigir a una página de agradecimiento -->
+        <!-- <input type="hidden" name="_next" value="https://https://braiam-17.github.io/Web-SCOPPA/gracias.html"> -->
+
+        <button type="submit">
+          Enviar <i class="fas fa-paper-plane"></i>
+        </button>
       </form>
     </section>
 
