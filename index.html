@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -23,7 +23,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script src="scripts.js" defer></script>
-  </head>
+
+</head>
   <body>
     <a href="https://wa.link/ebwxlr" target="_blank" class="whatsapp-float">
       <img src="assets\images\whatsapp.png" alt="WhatsApp" />
@@ -45,7 +46,7 @@
             <ul>
               <li><a href="#Inicio"><i class="fas fa-home"></i> Inicio</a></li>
               <li><a href="#Cotizar"><i class="fas fa-hand-holding-dollar"></i> Cotizar</a></li>
-              <li><a href="#Beneficios-Requisitos"><i class="fas fa-trophy"></i> Beneficios</a></li>
+              <li><a href="#Beneficios-Requisitos"><i class="fas fa-award"></i> Beneficios</a></li>
               <li><a href="#Beneficios-Requisitos"><i class="fas fa-clipboard-list"></i> Requisitos</a></li>
               <li><a href="#Contacto"><i class="fas fa-envelope"></i> Contacto</a></li>
             </ul>
@@ -137,7 +138,7 @@
           </div>
         </div>
 
-        <button onclick="openPopup()">COTIZAR</button>
+        <button onclick="openPopup()"><i class="fas fa-hand-holding-dollar"></i> COTIZAR</button>
 
         <div id="popup" class="popup">
           <div class="popup-content">
@@ -202,7 +203,7 @@
     <section id="Beneficios-Requisitos">
       <div class="contenedor-beneficios-requisitos">
         <div class="columna-izq">
-          <h4>Beneficios</h4>
+          <h4><i class="fas fa-award"></i> Beneficios</h4>
           <ul>
             <li>
               <b>Agilidad de otorgamiento</b>: análisis y respuesta de tu
@@ -222,7 +223,7 @@
         <div class="linea-divisoria"></div>
 
         <div class="columna-der">
-          <h4>Requisitos</h4>
+          <h4><i class="fas fa-clipboard-list"></i> Requisitos</h4>
           <ul>
             <li>DNI, emitido en la Argentina.</li>
             <li>Ingresos demostrables.</li>
@@ -239,13 +240,14 @@
     </section>
 
     <section id="Contacto" class="contacto">
-      <h5>Contacto</h5>
-      <form>
+      <h5><i class="fas fa-envelope"></i> Contacto</h5>
+      <!-- FormSumbit para el prototipo -->
+      <form action="https://formsubmit.co/tobiasvidelaug14@gmail.com" method="POST" id="contact-form">
         <input type="text" placeholder="Nombre y apellido" required />
         <input type="email" placeholder="Email" required />
         <input type="tel" placeholder="Teléfono" required />
         <textarea rows="4" placeholder="Mensaje" required></textarea>
-        <button type="submit">Enviar</button>
+        <button type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
       </form>
     </section>
 
@@ -253,6 +255,7 @@
       <div class="contact-social-container">
         <div class="direccion">
           <a href="https://maps.app.goo.gl/kxeon47u5oaB7kUSA" target="_blank">
+            <i class="fa fa-location-dot"></i>
             Mendoza 556, Río Cuarto, Córdoba
           </a>
         </div>
