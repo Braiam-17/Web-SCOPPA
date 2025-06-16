@@ -63,6 +63,11 @@ header {
   justify-content: space-between;
   top: 0; /* pone al elemento en el borde superior de la pagina */
   z-index: 12;
+  transition: transform 0.3s ease-in-out;
+}
+
+header.hide {
+  transform: translateY(-100%);
 }
 
 .navbar {

@@ -4,7 +4,26 @@ const cerrarMenu = document.querySelector("#menu-cerrar");
 const navbar = document.querySelector("#navbar");
 const nav = document.querySelector("#nav");
 const navLinks = document.querySelectorAll("a");
+const header = document.querySelector("header");
 
+/*Header scroll handling*/
+let lastScroll = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll && currentScroll > 50) {
+    // Scrolling down
+    header.classList.add("hide");
+  } else {
+    // Scrolling up
+    header.classList.remove("hide");
+  }
+
+  lastScroll = currentScroll;
+});
+
+/*NAVBAR menu*/
 abrirMenu.addEventListener('click', () => {
   nav.classList.add('visible');
 });
@@ -20,6 +39,7 @@ navLinks.forEach(link => {
   })
 });
 
+/*POP UP*/
 function openPopup() {
   document.getElementById("popup").style.display = "flex";
 }
