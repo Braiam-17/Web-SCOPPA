@@ -57,6 +57,11 @@ function closePopupResultados() {
   closePopup();
 }
 
+function volver() {
+  document.getElementById("popupResultados").style.display = "none";
+  openPopup();
+}
+
 function calcularSeguro(event) {
   event.preventDefault();
 
@@ -75,7 +80,7 @@ function calcularSeguro(event) {
     // derivar al wsp
     let cardsHTML = `
       <div class="card card-green">
-        <p>Para continuar con la cotización, te invitamos a que con contactes por WhatsApp.</p>
+        <p>Para continuar con la cotización, te invitamos a que nos contactes por WhatsApp.</p>
         <button class="whatsapp-btn" onclick="derivarWhatsApp()">
           <i class="fa-brands fa-whatsapp"></i> Contactar por WhatsApp
         </button>

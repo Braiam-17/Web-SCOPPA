@@ -127,7 +127,7 @@ header.hide {
 
 /*Inicio*/
 .seccion-inicio {
-  height: 651px;
+  height: 90dvh;
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
   /* padding: 1rem 1rem 1rem; */
@@ -273,6 +273,29 @@ header.hide {
   background-color: var(--Azul2);
 }
 
+/*ALCANCES*/
+h3 {
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.alcances-list {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 1em;
+}
+
+.alcances-list ul {
+  text-align: left;
+  paddign-left: 0.3em;
+}
+
+.alcances-list li {
+  margin-bottom: 0.3em;
+  list-style-type: square;
+  list-style-position: inside;
+}
+
 /* POPUP */
 .popup {
   display: none;
@@ -342,6 +365,18 @@ header.hide {
 .popup-content button:hover {
   background-color: var(--Azul1);
   cursor: pointer;
+}
+
+.back {
+  float: left;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--Blanco);
+  margin-bottom: 1rem;
+}
+
+.back:hover {
+  color: var(--Azul1);
 }
 
 .close {
@@ -458,7 +493,7 @@ h4 {
 .contenedor-beneficios-requisitos li {
   margin-bottom: 15px;
   font-size: 18px;
-  color: #033b4a;
+  color: var(--Azul1);
   line-height: 1.6;
 }
 
@@ -575,26 +610,29 @@ h4 {
 
 /*Responsive*/
 /* --- Responsive --- */
-/* Responsive para pantallas pequeñas */
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 1105px) {
   header {
-    justify-content: space-between;
+    justify-content: right;
+    height: 80px;
   }
-
+  .seccion-inicio {
+    margin-top: 80px;
+  }
   #logo {
-    position: relative;
-    left: 0;
+    display: none;
   }
-
+}
+@media screen and (max-width: 785px) {
+  header {
+    justify-content: right;
+  }
   .menu-abrir,
   .menu-cerrar {
     display: block;
   }
-
   .nav {
     opacity: 0;
     visibility: hidden;
-
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -607,13 +645,11 @@ h4 {
     padding: 2rem;
     box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
   }
-
   .nav.visible {
     height: 100vmax;
     opacity: 1;
     visibility: visible;
   }
-
   .nav ul {
     padding: 0.5rem;
     display: flex;
@@ -621,32 +657,26 @@ h4 {
     align-items: end;
     gap: 1.2rem;
   }
-
-  /*Inicio*/
   .contenido-inicio {
     grid-template-columns: auto;
     gap: 0.1em;
     padding-top: 2rem;
   }
-
   .columna-izquierda {
     max-width: 100%;
   }
-
   .columna-izquierda p {
     margin-bottom: 0;
   }
-
   .columna-derecha ul {
     /* line-height: 1.7; */
     margin-bottom: 0;
     padding-bottom: 0;
   }
-
   .columna-derecha li {
     padding-top: 0;
   }
-  
+ 
   /*PopUp*/
   .popup-content {
     padding: 1rem;
@@ -680,7 +710,7 @@ h4 {
   /*INICIO*/
   .seccion-inicio {
     height: auto;
-    margin-top: 45px;
+    margin-top: 60px;
   }
   /*FOOTER*/
   .contact-social-container {

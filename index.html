@@ -100,13 +100,23 @@
               alt="Triunfo Seguros Logo"
               class="company-logo"
             />
-            <p>
-              El Seguro de Caución se emite para asegurar el cumplimiento en
-              tiempo y forma de una obligación que surge de la firma de un
-              contrato, cuando el Beneficiario de dicha obligación deja
-              expresado en el mismo que el Tomador (o sujeto obligado) garantice
-              el cumplimiento..
-            </p>
+            <!-- <p> -->
+              <!-- El Seguro de Caución se emite para asegurar el cumplimiento en -->
+              <!-- tiempo y forma de una obligación que surge de la firma de un -->
+              <!-- contrato, cuando el Beneficiario de dicha obligación deja -->
+              <!-- expresado en el mismo que el Tomador (o sujeto obligado) garantice -->
+              <!-- el cumplimiento.. -->
+            <!-- </p> -->
+            <div class="alcances-list">
+              <h3>Alcance de cobertura:</h3>
+              <ul>
+                <li>Alquileres Impagos.</li>
+                  <li>Expensas Ordinarias (hasta 10% del monto del contrato).</li>
+                  <li>Servicios e Impuestos (hasta 10% del monto del contrato).</li>
+                  <li>Ocupación Indebida (hasta 10% del monto del contrato).</li>
+                  <li>Depósito de Garantía (hasta 10% del monto del contrato).</li>
+              </ul>
+            </div>
           </div>
 
           <div class="card card-blue">
@@ -115,13 +125,23 @@
               alt="BBVA Logo"
               class="company-logo"
             />
-            <p>
-              Este seguro brinda una garantía al propietario ante las
-              obligaciones del inquilino en el alquiler de viviendas
-              particulares, como así también permite reemplazar o suplir la
-              garantía de un título de propiedad inmueble, que se suele
-              solicitar al momento de la firma del contrato.
-            </p>
+            <!-- <p> -->
+              <!-- Este seguro brinda una garantía al propietario ante las -->
+              <!-- obligaciones del inquilino en el alquiler de viviendas -->
+              <!-- particulares, como así también permite reemplazar o suplir la -->
+              <!-- garantía de un título de propiedad inmueble, que se suele -->
+              <!-- solicitar al momento de la firma del contrato. -->
+            <!-- </p> -->
+            <div class="alcances-list">
+              <h3>Alcance de cobertura:</h3>
+              <ul>
+                <li>Alquileres Impagos.</li>
+                <li>Expensas Ordinarias (Monto informado por el asegurado por el plazo de cobertura).</li>
+                <li>Servicios e Impuestos (5 % del monto del contrato).</li>
+                <li>Ocupación Indebida (15 % del monto del contrato).</li>
+                <li>Depósito en Garantía (5 % del monto del contrato).</li>
+              </ul>
+            </div>
           </div>
 
           <div class="card card-purple">
@@ -130,11 +150,20 @@
               alt="Sancor Seguros Logo"
               class="company-logo"
             />
-            <p>
-              El seguro de caución de alquiler es una garantía de alquiler para
-              vivienda de uso familiar, asegurando tranquilidad al propietario y
-              al inquilino.
-            </p>
+            <!-- <p> -->
+              <!-- El seguro de caución de alquiler es una garantía de alquiler para -->
+              <!-- vivienda de uso familiar, asegurando tranquilidad al propietario y -->
+              <!-- al inquilino. -->
+            <!-- </p> -->
+            <div class="alcances-list">
+              <h3>Alcance de cobertura:</h3>
+              <ul>
+                <li>Alquileres Impagos.</li>
+                <li>Expensas comunes Ordinarias (con Sublímite con ajuste proporcional al canon).</li>
+                <li>Servicios hasta 10% del canon (con Sublímite del 10% del monto del contrato).</li>
+                <li>Ocupación Indebida (hasta 6 meses).</li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -142,43 +171,44 @@
 
         <div id="popup" class="popup">
           <div class="popup-content">
-            <span class="close" onclick="closePopup()">&times;</span>
-            <h3 class="title-popup">Cotizar Seguro de Alquiler</h3>
+            <span class="close" onclick="closePopup()"><i class="fas fa-close"></i></span>
+            <h3 class="title-popup">Cotizá tu Seguro de Alquiler</h3>
             <form id="cotizacionForm" onsubmit="return calcularSeguro(event)">
-              <label class="title-form">Nombre y Apellido</label>
               <input
                 type="text"
                 id="nombre"
-                placeholder="Ingresá Nombre y apellido"
+                name="nombre"
+                placeholder="Nombre y apellido"
                 required
               />
-              <label class="title-form">E-Mail</label>
               <input
-                type="email"
-                id="email"
-                placeholder="Ingresá tu E-Mail"
+                    type="email"
+                    id="email"
+              name="email"
+              placeholder="Email"
                 required
               />
-              <label class="title-form">Celular</label>
               <input
                 type="text"
                 id="telefono"
-                placeholder="Ingresá tu número de celular"
+                name="telefono"
+                placeholder="Teléfono"
                 required
               />
-              <label class="title-form">Monto de su Alquiler + Expensas</label>
+              <label class="title-form" for="alquiler">Monto de su Alquiler + Expensas</label>
               <input
                 type="number"
                 id="alquiler"
+                name="alquiler"
                 placeholder="Ingresá el Monto del Alquiler + Expensas ($)"
                 required
               />
               <select id="meses" required>
                 <option value="">Duración del contrato</option>
-                <option value="12">12 meses</option>
-                <option value="24">24 meses</option>
-                <option value="36">36 meses</option>
-              </select>
+                  <option value="12">12 meses</option>
+                  <option value="24">24 meses</option>
+              <option value="36">36 meses</option>
+            </select>
               <select id="tipo" required>
                 <option value="">Tipo de contrato</option>
                 <option value="particular">Particular</option>
@@ -192,7 +222,8 @@
 
         <div id="popupResultados" class="popup" style="display: none">
           <div class="popup-content">
-            <span class="close" onclick="closePopupResultados()">&times;</span>
+            <span class="back" onclick="volver()"><i class="fas fa-arrow-left"></i></span>
+            <span class="close" onclick="closePopupResultados()"><i class="fas fa-close"></i></span>
             <h2>Resultados de Cotización</h2>
             <div class="cards-container" id="resultCards"></div>
           </div>
