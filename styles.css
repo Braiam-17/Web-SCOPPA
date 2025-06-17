@@ -123,31 +123,36 @@ header.hide {
 
 /*Inicio*/
 .seccion-inicio {
-  height: 90dvh;
+  /* height: 90dvh; */
+  min-height: calc(100vh - 115px);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
   /* padding: 1rem 1rem 1rem; */
   padding: 2rem;
-  padding-bottom: 0;
-  position: relative;
-  text-align: left;
+  /* padding-bottom: 0; */
+  /* position: relative; */
+  /* text-align: left; */
   margin-top: 115px;
   color: var(--Blanco);
   overflow: hidden;
   display: flex;
-  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  /* flex-direction: column-reverse; */
 }
 
 .contenido-inicio {
-  position: absolute;
-  left: 30px;   /* distancia desde la izquierda */
+  /* position: absolute; */
+  /* left: 30px;   /* distancia desde la izquierda */
   
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
 
-  gap: 3rem; /* espacio entre columnas */
-  max-width: 1300px;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0.5cm;
 }
@@ -161,6 +166,12 @@ header.hide {
 .seccion-inicio em {
   font-style: italic;
   font-weight: bold;
+}
+
+.columna-izquierda,
+.columna-derecha {
+  flex: 1 1 45%;
+  min-width: 300px;
 }
 
 .columna-derecha {
@@ -319,8 +330,6 @@ h3 {
   overflow-y: auto;
   color: var(--Blanco);
 }
-
-/* Popup de resultados necesita ser más ancho */
 
 .title-form {
   display: flex;
@@ -656,34 +665,23 @@ h4 {
     align-items: end;
     gap: 1.2rem;
   }
+  /*seccion inicio*/
   .contenido-inicio {
-    grid-template-columns: auto;
-    gap: 0.1em;
-    padding-top: 2rem;
-  }
-  .columna-izquierda {
-    max-width: 100%;
-  }
-  .columna-izquierda p {
-    margin-bottom: 0;
-  }
-  .columna-derecha ul {
-    /* line-height: 1.7; */
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .columna-derecha li {
-    padding-top: 0;
+    flex-direction: column;
   }
  
   /*PopUp*/
+  .popup {
+    max-width: 100dvw;
+  }
+  
   .popup-content {
     padding: 1rem;
-    width: 95%;
+    width: 80dvw;
   }
 
   #popupResultados .popup-content {
-    max-width: 95%;
+    max-width: 80dvw;
   }
 
   .popup .cards-container {
@@ -723,9 +721,20 @@ h4 {
   }
 }
 
+@media screen and (max-width:460px) {
+  /*beneficios y requisitos*/
+  .contenedor-beneficios-requisitos {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: 400px) {
   header {
     margin-right: 70px;
+  }
+    
+  .footer {
+    height: 230px;
   }
 }
 
