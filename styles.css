@@ -9,7 +9,6 @@
   --font-title: "Merriweather";
 }
 
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -87,9 +86,10 @@ header.hide {
 
 #logo {
   width: auto;
-  height: 85px;
+  height: 65px;
+  margin: auto;
   margin-left: 0.7cm;
-  margin-top: 0.3cm;
+  /* margin-top: 0.3cm; */
 }
 
 .navbar ul {
@@ -123,32 +123,24 @@ header.hide {
 
 /*Inicio*/
 .seccion-inicio {
-  /* height: 90dvh; */
   min-height: calc(100vh - 115px);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
-  /* padding: 1rem 1rem 1rem; */
   padding: 2rem;
-  /* padding-bottom: 0; */
-  /* position: relative; */
-  /* text-align: left; */
   margin-top: 115px;
   color: var(--Blanco);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* flex-direction: column-reverse; */
 }
 
 .contenido-inicio {
-  /* position: absolute; */
-  /* left: 30px;   /* distancia desde la izquierda */
-  
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
 
   gap: 2rem;
   width: 100%;
@@ -168,39 +160,34 @@ header.hide {
   font-weight: bold;
 }
 
-.columna-izquierda,
-.columna-derecha {
+.caucion-descripcion,
+.caucion-lista {
   flex: 1 1 45%;
+  max-width: 85%;
   min-width: 300px;
 }
 
-.columna-derecha {
+.caucion-lista {
+  list-style-position: inside;
   display: flex;
   justify-content: center;
   align-items: end;
 }
 
-.columna-izquierda {
-  max-width: 800px;
-  
-}
-
-.columna-izquierda p {
+.caucion-descripcion p {
   font-size: 1.25em;
   line-height: 2;
 }
 
-.columna-derecha ul {
+.caucion-lista ul {
   list-style: disc;
-  padding-left: 1.5rem;
   font-size: 1.2em;
   text-align: left;
   line-height: 1.7;
   margin-bottom: 1.5rem;
-  padding-bottom: 0.2em;
 }
 
-.columna-derecha li {
+.caucion-lista li {
   padding-top: 1.5em;
 }
 
@@ -250,10 +237,15 @@ header.hide {
 }
 
 .card img.company-logo {
-  width: 100%; /* Asegura el ancho completo */
-  height: 90px; /* Altura estándar para todas las imágenes */
+  width: 70%; /* Asegura el ancho completo */
+  height: 70px; /* Altura estándar para todas las imágenes */
   object-fit: contain; /* O 'cover' si prefieres recorte en lugar de ajuste */
   margin: 10px 0;
+}
+
+.card img.company-logo:first-child { /*TRIUNFO SEGUROS*/
+  width: 90%;
+  height: 90px;
 }
 
 .card p {
@@ -476,13 +468,9 @@ h3 {
   border-right: none;
 }
 
-.columna-izq,
-.columna-der {
+.columna-beneficios,
+.columna-requisitos {
   flex: 1;
-}
-
-.columna-izq {
-  max-width: 600px;
 }
 
 h4 {
@@ -580,10 +568,10 @@ h4 {
 
 .contact-social-container {
   display: flex;
-  justify-content: center; /* CENTRA todo horizontalmente */
-  align-items: center;      /* Alinea verticalmente */
-  gap: 2rem;                /* Espacio entre dirección e íconos */
-  flex-wrap: wrap;          /* Por si en celular querés que se acomoden */
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .direccion a {
