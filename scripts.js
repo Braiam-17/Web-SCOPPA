@@ -109,11 +109,11 @@ function calcularSeguro(event) {
 
   const costoTriunfo = Math.round(sumaAsegurada * tasaTriunfo);
 
-  // Calcular para BBVA (5% para cualquier vigencia)
-  const costoBBVA = Math.round(sumaAsegurada * 0.05);
+  // Calcular para BBVA (5% para cualquier vigencia y 15% bonificación)
+  const costoBBVA = Math.round(sumaAsegurada * 0.05 * 0.85);
 
-  // Calcular para Sancor (5.5% solo para 24 meses)
-  const costoSancor = meses === 24 ? Math.round(sumaAsegurada * 0.055) : null;
+  // Calcular para Sancor (5.5% solo para 24 meses y 25% bonificación)
+  const costoSancor = meses === 24 ? Math.round(sumaAsegurada * 0.055 * 0.75) : null;
 
   // Construir tarjetas de resultados
   let cardsHTML = `
