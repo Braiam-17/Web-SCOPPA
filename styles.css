@@ -237,15 +237,16 @@ header.hide {
 }
 
 .card img.company-logo {
-  width: 70%; /* Asegura el ancho completo */
-  height: 70px; /* Altura estándar para todas las imágenes */
+  width: 65%; /* Asegura el ancho completo */
+  height: 60px; /* Altura estándar para todas las imágenes */
   object-fit: contain; /* O 'cover' si prefieres recorte en lugar de ajuste */
   margin: 10px 0;
 }
 
-.card img.company-logo:first-child { /*TRIUNFO SEGUROS*/
-  width: 90%;
-  height: 90px;
+.card img.company-logoTS {
+  height: 65px; /* Altura estándar para todas las imágenes */
+  object-fit: contain; /* O 'cover' si prefieres recorte en lugar de ajuste */
+  margin: 10px 0;
 }
 
 .card p {
@@ -289,13 +290,11 @@ h3 {
 
 .alcances-list ul {
   text-align: left;
-  paddign-left: 0.3em;
+  padding-left: 0.3em;
 }
 
 .alcances-list li {
-  margin-bottom: 0.3em;
-  list-style-type: square;
-  list-style-position: inside;
+  margin-bottom: 0.4em;
 }
 
 /* POPUP */
@@ -360,6 +359,7 @@ h3 {
   background-color: var(--Turquesa1);
   color: var(--Blanco);
   font-weight: bold;
+  
 }
 
 .popup-content button:hover {
@@ -421,6 +421,7 @@ h3 {
   margin: 0.5rem 0;
   color: rgb(50, 50, 50);
   line-height: 1.4;
+  text-align: left;
 }
 
 .popup .card p strong {
@@ -562,19 +563,21 @@ h4 {
   background-color: var(--Blanco);
   color: var(--Azul2);
   padding: 1.2rem;
+  
   text-align: center;
   font-family: var(--font-main);
 }
 
 .footer-logo {
   margin: auto;
-  padding: 0.7em;
+  padding: 0.5em;
+  padding-bottom: 0.7em;
 }
 
 .footer-logo img {
   height: auto;
   width: 100%;
-  max-width: 587px;
+  max-width: 350px;
 }
 
 .contact-social-container {
