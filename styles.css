@@ -125,7 +125,7 @@ header.hide {
 .seccion-inicio {
   min-height: calc(100vh - 115px);
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url("./assets/images/imagen fondo.jpg") center/cover no-repeat;
+    url("./assets/images/bg.png") center/cover no-repeat;
   padding: 2rem;
   margin-top: 115px;
   color: var(--Blanco);
@@ -141,12 +141,20 @@ header.hide {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
   gap: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0.5cm;
+}
+
+/* Fondo translúcido + sombra de texto */
+.texto-combinado {
+  background-color: rgba(0, 0, 0, 0.25);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
 }
 
 .seccion-inicio h1 {
@@ -167,28 +175,52 @@ header.hide {
   min-width: 300px;
 }
 
-.caucion-lista {
-  list-style-position: inside;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-}
-
 .caucion-descripcion p {
   font-size: 1.25em;
   line-height: 2;
 }
 
+/* Lista mejorada */
+.caucion-lista {
+  font-family: "Segoe UI", "Roboto", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
 .caucion-lista ul {
-  list-style: disc;
+  list-style: none; /* Eliminamos bullet clásico */
   font-size: 1.2em;
   text-align: left;
   line-height: 1.7;
   margin-bottom: 1.5rem;
+  padding-left: 0;
 }
 
 .caucion-lista li {
-  padding-top: 1.5em;
+  position: relative;
+  padding-left: 2em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.2s ease;
+  line-height: 1.7;
+  display: flex;
+  align-items: flex-start; /* para textos multilínea */
+  gap: 0.5em;
+}
+
+.caucion-lista li:hover {
+  transform: translateX(8px);
+}
+
+/* Ícono de check ✔️ */
+.caucion-lista li::before {
+  content: "✔️";
+  color: #00c292;
+  font-size: 1.2em;
+  margin-top: 0.2em; /* ajusta fino si es necesario */
+  flex-shrink: 0; /* evita que el ícono se achique */
 }
 
 /*Cotizar*/
@@ -359,7 +391,6 @@ h3 {
   background-color: var(--Turquesa1);
   color: var(--Blanco);
   font-weight: bold;
-  
 }
 
 .popup-content button:hover {
@@ -563,7 +594,7 @@ h4 {
   background-color: var(--Blanco);
   color: var(--Azul2);
   padding: 1.2rem;
-  
+
   text-align: center;
   font-family: var(--font-main);
 }
@@ -653,7 +684,7 @@ h4 {
     bottom: 0;
     background-color: var(--Blanco);
     padding: 2rem;
-    box-shadow: 0 0 0 100vmax rgba(0,0,0,0.5);
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
   }
   .nav.visible {
     height: 100vmax;
@@ -671,12 +702,12 @@ h4 {
   .contenido-inicio {
     flex-direction: column;
   }
- 
+
   /*PopUp*/
   .popup {
     max-width: 100dvw;
   }
-  
+
   .popup-content {
     padding: 1rem;
     width: 80dvw;
@@ -723,7 +754,7 @@ h4 {
   }
 }
 
-@media screen and (max-width:460px) {
+@media screen and (max-width: 460px) {
   /*beneficios y requisitos*/
   .contenedor-beneficios-requisitos {
     flex-direction: column;
@@ -734,7 +765,7 @@ h4 {
   header {
     margin-right: 70px;
   }
-    
+
   .footer {
     height: 230px;
   }
