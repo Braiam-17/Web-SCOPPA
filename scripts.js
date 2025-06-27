@@ -119,7 +119,7 @@ function calcularSeguro(event) {
   let cardsHTML = `
         <div class="card card-green">
           <img src="./assets/images/logo-TS.png" alt="Triunfo Seguros Logo" class="company-logo" />
-          <h4>Triunfo Seguros</h4>
+          
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
           <p><strong>Contado:</strong> ${costoTriunfo.toLocaleString()}</p>
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
@@ -134,7 +134,7 @@ function calcularSeguro(event) {
     
         <div class="card card-blue">
           <img src="./assets/images/logo-BBVA.svg" alt="BBVA Logo" class="company-logo" />
-          <h4>BBVA</h4>
+          
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
           <p><strong>Contado:</strong> ${costoBBVA.toLocaleString()}</p>
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
@@ -153,7 +153,7 @@ function calcularSeguro(event) {
     cardsHTML += `
           <div class="card card-purple">
             <img src="./assets/images/logo-GSS.png" alt="Sancor Seguros Logo" class="company-logo" />
-            <h4>Sancor Seguros</h4>
+            
             <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
             <p><strong>Contado:</strong> ${costoSancor.toLocaleString()}</p>
             <p><strong>3 cuotas sin interés:</strong> ${Math.round(
