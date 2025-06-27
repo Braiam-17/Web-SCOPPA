@@ -821,3 +821,9 @@ h4 {
 .fade-down {
   animation: fadeDown 1.4s ease-out forwards;
 }
+
+@media screen and (max-width: 768px) {
+  .seccion-inicio {
+    background: linear-gradient(135deg, var(--Azul1), var(--Turquesa2));
+  }
+}
