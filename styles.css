@@ -223,6 +223,41 @@ header.hide {
   flex-shrink: 0; /* evita que el ícono se achique */
 }
 
+@media (max-width: 768px) {
+  .contenido-inicio {
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1.5rem;
+  }
+
+  .caucion-descripcion,
+  .caucion-lista {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+  }
+
+  .texto-combinado {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  .caucion-lista ul {
+    padding-left: 0;
+  }
+
+  .caucion-lista li {
+    font-size: 1em;
+    padding-left: 2em;
+    word-wrap: break-word;
+  }
+
+  .caucion-lista li::before {
+    left: 0;
+    top: 0.3em;
+  }
+}
+
 /*Cotizar*/
 .cotizar {
   background-color: var(--Azul1);
