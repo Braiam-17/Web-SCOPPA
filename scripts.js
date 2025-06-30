@@ -159,11 +159,11 @@ function calcularSeguro(event) {
             <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
             <p><strong>Contado:</strong> ${costoSancor_descuento.toLocaleString()}</p>
             <p><strong>3 cuotas sin interés:</strong> ${Math.round(
-              cuotasSancor
+              cuotasSancor_3
             ).toLocaleString()} c/u</p>
             <p><em>*Solo disponible para contratos de 24 meses</em></p>
             <button class="whatsapp-btn" onclick="enviarWhatsApp('Sancor Seguros', ${costoSancor_descuento}, ${Math.round(
-      cuotasSancor
+      cuotasSancor_3
     )})">
               <i class="fa-brands fa-whatsapp"></i> Contratar
             </button>
