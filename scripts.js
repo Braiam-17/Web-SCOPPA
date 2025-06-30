@@ -110,10 +110,14 @@ function calcularSeguro(event) {
   const costoTriunfo = Math.round(sumaAsegurada * tasaTriunfo);
 
   // Calcular para BBVA (5% para cualquier vigencia y 15% bonificación)
-  const costoBBVA = Math.round(sumaAsegurada * 0.05 * 0.85);
+  const costoBBVA = Math.round(sumaAsegurada * 0.05);
+  const costoBBVA_descuento = Math.round(costoBBVA * 0.85);
+  const cuotasBBVA_3 = Math.round(costoBBVA / 3);
 
   // Calcular para Sancor (5.5% solo para 24 meses y 25% bonificación)
-  const costoSancor = meses === 24 ? Math.round(sumaAsegurada * 0.055 * 0.75) : null;
+  const costoSancor = meses === 24 ? Math.round(sumaAsegurada * 0.055) : null;
+  const costoSancor_descuento = Math.round(costoSancor * 0.75);
+  const cuotasSancor_3 = Math.round(costoSancor / 3);
 
   // Construir tarjetas de resultados
   let cardsHTML = `
@@ -128,7 +132,7 @@ function calcularSeguro(event) {
           <button class="whatsapp-btn" onclick="enviarWhatsApp('Triunfo Seguros', ${costoTriunfo}, ${Math.round(
     costoTriunfo / 3
   )})">
-            <i class="fa-brands fa-whatsapp"></i> Contratar Servicio
+            <i class="fa-brands fa-whatsapp"></i> Contratar
           </button>
         </div>
     
@@ -136,14 +140,12 @@ function calcularSeguro(event) {
           <img src="./assets/images/logo-BBVA.svg" alt="BBVA Logo" class="company-logo" />
           
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
-          <p><strong>Contado:</strong> ${costoBBVA.toLocaleString()}</p>
+          <p><strong>Contado:</strong> ${costoBBVA_descuento.toLocaleString()}</p>
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
-            costoBBVA / 3
+            cuotasBBVA_3
           ).toLocaleString()} c/u</p>
-          <button class="whatsapp-btn" onclick="enviarWhatsApp('BBVA', ${costoBBVA}, ${Math.round(
-    costoBBVA / 3
-  )})">
-            <i class="fa-brands fa-whatsapp"></i> Contratar Servicio
+          <button class="whatsapp-btn" onclick="enviarWhatsApp('BBVA', ${costoBBVA_descuento}, ${Math.round(cuotasBBVA_3)})">
+            <i class="fa-brands fa-whatsapp"></i> Contratar
           </button>
         </div>
       `;
@@ -155,15 +157,15 @@ function calcularSeguro(event) {
             <img src="./assets/images/logo-GSS.png" alt="Sancor Seguros Logo" class="company-logo" />
             
             <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
-            <p><strong>Contado:</strong> ${costoSancor.toLocaleString()}</p>
+            <p><strong>Contado:</strong> ${costoSancor_descuento.toLocaleString()}</p>
             <p><strong>3 cuotas sin interés:</strong> ${Math.round(
-              costoSancor / 3
+              cuotasSancor
             ).toLocaleString()} c/u</p>
             <p><em>*Solo disponible para contratos de 24 meses</em></p>
-            <button class="whatsapp-btn" onclick="enviarWhatsApp('Sancor Seguros', ${costoSancor}, ${Math.round(
-      costoSancor / 3
+            <button class="whatsapp-btn" onclick="enviarWhatsApp('Sancor Seguros', ${costoSancor_descuento}, ${Math.round(
+      cuotasSancor
     )})">
-              <i class="fa-brands fa-whatsapp"></i> Contratar Servicio
+              <i class="fa-brands fa-whatsapp"></i> Contratar
             </button>
           </div>
         `;
