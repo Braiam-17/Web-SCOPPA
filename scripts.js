@@ -3,6 +3,9 @@ const path_to_bbva_logo = "./assets/images/logos/BBVA.svg";
 const path_to_sancor_logo = "./assets/images/logos/sancor.png";
 const path_to_triunfo_logo = "./assets/images/logos/triunfo.png";
 
+// URLs
+const url_to_thank_you_page = "./gracias.html"
+
 // DATOS EMPRESA
 const wsp_oficina_clientes = "5493585024891";
 
@@ -256,3 +259,9 @@ function derivarWhatsApp() {
   )}`;
   window.open(whatsappUrl, "_blank");
 }
+
+// Redireccionar a una página de agradecimiento
+document.querySelector('#contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  window.location.href = url_to_thank_you_page;
+});
