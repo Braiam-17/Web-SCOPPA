@@ -1,4 +1,12 @@
+// PATHS
+const path_to_bbva_logo = "./assets/images/logos/BBVA.svg";
+const path_to_sancor_logo = "./assets/images/logos/sancor.png";
+const path_to_triunfo_logo = "./assets/images/logos/triunfo.png";
+
+// DATOS EMPRESA
 const wsp_oficina_clientes = "5493585024891";
+
+// ELEMENTOS DEL HTML
 const abrirMenu = document.querySelector("#menu-abir");
 const cerrarMenu = document.querySelector("#menu-cerrar");
 const navbar = document.querySelector("#navbar");
@@ -122,7 +130,7 @@ function calcularSeguro(event) {
   // Construir tarjetas de resultados
   let cardsHTML = `
         <div class="card card-green">
-          <img src="./assets/images/logo-TS.png" alt="Triunfo Seguros Logo" class="company-logo" />
+          <img src=${path_to_triunfo_logo} alt="Triunfo Seguros Logo" class="company-logo" />
           
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
           <p><strong>Contado:</strong> ${costoTriunfo.toLocaleString()}</p>
@@ -137,7 +145,7 @@ function calcularSeguro(event) {
         </div>
     
         <div class="card card-blue">
-          <img src="./assets/images/logo-BBVA.svg" alt="BBVA Logo" class="company-logo" />
+          <img src=${path_to_bbva_logo} alt="BBVA Logo" class="company-logo" />
           
           <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
           <p><strong>Contado:</strong> ${costoBBVA_descuento.toLocaleString()}</p>
@@ -154,7 +162,7 @@ function calcularSeguro(event) {
   if (costoSancor !== null) {
     cardsHTML += `
           <div class="card card-purple">
-            <img src="./assets/images/logo-GSS.png" alt="Sancor Seguros Logo" class="company-logo" />
+            <img src=${path_to_sancor_logo} alt="Sancor Seguros Logo" class="company-logo" />
             
             <p><strong>Suma Asegurada:</strong> ${sumaAsegurada.toLocaleString()}</p>
             <p><strong>Contado:</strong> ${costoSancor_descuento.toLocaleString()}</p>
