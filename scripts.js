@@ -260,8 +260,9 @@ function derivarWhatsApp() {
   window.open(whatsappUrl, "_blank");
 }
 
+/* --- Gracias --- */
 // Redireccionar a una página de agradecimiento
-document.querySelector('#contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
-  window.location.href = url_to_thank_you_page;
-});
+// document.querySelector('#contact-form').addEventListener('submit', function(event) {
+//   event.preventDefault();
+//   window.location.href = url_to_thank_you_page;
+// });
