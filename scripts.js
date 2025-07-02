@@ -108,10 +108,10 @@ function calcularSeguro(event) {
   }
 
   // Calcular para Triunfo Seguros
-  // Corregido: 12 meses = 1.5%, 24 meses = 3%, 36 meses = 4.5%
+  // Corregido: 12 meses , 24 meses = 3%, 36 meses = 4.5%
   let tasaTriunfo;
   if (meses === 12) {
-    tasaTriunfo = 0.015; // 1.5%
+    tasaTriunfo = 0.03; // 3% (corrección nueva)
   } else if (meses === 24) {
     tasaTriunfo = 0.03; // 3%
   } else if (meses === 36) {
