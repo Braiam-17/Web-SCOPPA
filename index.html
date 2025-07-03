@@ -316,10 +316,10 @@
 
     <section id="Contacto" class="contacto">
       <h5><i class="fas fa-envelope"></i> Contacto</h5>
-      <!-- FormSumbit para el prototipo -->
+      <!-- Formspree para el prototipo -->
       <form
         id="contact-form"
-        action="https://formsubmit.co/tobiasguliotti@gmail.com"
+        action="https://formspree.io/f/movwbpvz"
         method="POST"
       >
         <!-- Datos a enviar -->
@@ -338,16 +338,9 @@
           required
         ></textarea>
 
-        <!-- Setear URL -->
-        <input type="hidden" name="_url" value="https://braiam-17.github.io/Web-SCOPPA/index.html">
-        <!-- Redirigir a gracias.html -->
-        <input type="hidden" name="_next" value="https://braiam-17.github.io/Web-SCOPPA/gracias.html">
-
-        <!-- Quitar el captcha para las pruebas -->
-        <!-- <input type="hidden" name="_captcha" value="false" /> -->
-
         <button type="submit">Enviar <i class="fas fa-paper-plane"></i></button>
       </form>
+      <p id="mensaje-respuesta"></p>
     </section>
 
     <footer class="footer">

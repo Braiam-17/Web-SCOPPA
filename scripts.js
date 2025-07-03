@@ -3,9 +3,6 @@ const path_to_bbva_logo = "./assets/images/logos/BBVA.svg";
 const path_to_sancor_logo = "./assets/images/logos/sancor.png";
 const path_to_triunfo_logo = "./assets/images/logos/triunfo.png";
 
-// URLs
-const url_to_thank_you_page = "./gracias.html"
-
 // DATOS EMPRESA
 const wsp_oficina_clientes = "5493585024891";
 
@@ -260,9 +257,30 @@ function derivarWhatsApp() {
   window.open(whatsappUrl, "_blank");
 }
 
-/* --- Gracias --- */
-// Redireccionar a una página de agradecimiento
-// document.querySelector('#contact-form').addEventListener('submit', function(event) {
-//   event.preventDefault();
-//   window.location.href = url_to_thank_you_page;
-// });
+/* --- Contact form --- */
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+  event.preventDefault(); // Evita el envío predeterminado del formulario
+
+  const form = event.target;
+  const formData = new FormData(form);
+  const responseMensaje = document.getElementById('mensaje-respuesta');
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    });
+
+    if (response.ok) {
+      responseMensaje.textContent = 'Hemos recibido tu consulta y te contactaremos a la brevedad. ¡Gracias por confiar en nosotros!';
+      form.reset(); // Limpia el formulario
+    } else {
+      responseMensaje.textContent = 'Error al enviar el mensaje.';
+    }
+  } catch (error) {
+    responseMensaje.textContent = 'Error al enviar el mensaje.';
+  }
+});
