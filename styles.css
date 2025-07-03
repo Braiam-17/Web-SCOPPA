@@ -688,49 +688,11 @@ h4 {
   transform: scale(1.2);
 }
 
-/* --- GRACIAS --- */
-.thank-you-body {
-  margin: 0;
-  height: 100dvh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.thank-you-container {
-    text-align: center;
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-    max-width: 500px;
-    width: 90%;
-}
-.thank-you-container h1 {
-    font-family: 'Merriweather', serif;
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-.thank-you-container p {
-    font-size: 1rem;
-    color: #34495e;
-    margin-bottom: 30px;
-}
-.thank-you-container a {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: var(--Azul2);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-.thank-you-container a:hover {
-    background-color: var(--Turquesa1);
-}
-.thank-you-container i {
-    margin-right: 8px;
+/* --- CONTACT FORM --- */
+#mensaje-respuesta {
+  padding: 0.3em;
+  font-weight: 500;
+  color: var(--Blanco);
 }
 
 /* --- Responsive --- */
