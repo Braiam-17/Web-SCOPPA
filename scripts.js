@@ -174,7 +174,7 @@ function calcularSeguro(event) {
             <p><strong>3 cuotas sin interés:</strong> ${Math.round(
               cuotasSancor_3
             ).toLocaleString()} c/u</p>
-            <p><em>*Solo disponible para contratos de 24 meses</em></p>
+           
             <button class="whatsapp-btn" onclick="enviarWhatsApp('Sancor Seguros', ${costoSancor_descuento}, ${Math.round(
       cuotasSancor_3
     )})">
