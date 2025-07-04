@@ -254,6 +254,35 @@
                 <option value="particular">Particular</option>
                 <option value="comercial">Comercial</option>
               </select>
+              <label class="title-form" for="inmobiliaria"
+                >¿Contrato por Inmobiliaria?</label
+              >
+              <select
+                id="inmobiliaria"
+                name="inmobiliaria"
+                onchange="toggleNombreInmobiliaria()"
+                required
+              >
+                <option value="">Seleccioná una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+              </select>
+
+              <div
+                id="campoNombreInmobiliaria"
+                style="display: none; margin-top: 10px"
+              >
+                <label for="nombreInmobiliaria"
+                  >Nombre de la inmobiliaria</label
+                >
+                <input
+                  type="text"
+                  id="nombreInmobiliaria"
+                  name="nombreInmobiliaria"
+                  placeholder="Ingresá el nombre"
+                />
+              </div>
+
               <button type="submit">Calcular</button>
             </form>
             <div id="resultado" class="resultado"></div>

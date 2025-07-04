@@ -32,19 +32,19 @@ window.addEventListener("scroll", () => {
 });
 
 /*NAVBAR menu*/
-abrirMenu.addEventListener('click', () => {
-  nav.classList.add('visible');
+abrirMenu.addEventListener("click", () => {
+  nav.classList.add("visible");
 });
 
-cerrarMenu.addEventListener('click', () => {
-  nav.classList.remove('visible');
+cerrarMenu.addEventListener("click", () => {
+  nav.classList.remove("visible");
 });
 
-navLinks.forEach(link => {
-  link.addEventListener('click', () => {
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
     // ocultar menu desplegado
-    nav.classList.remove('visible');
-  })
+    nav.classList.remove("visible");
+  });
 });
 
 /*POP UP*/
@@ -81,6 +81,9 @@ function calcularSeguro(event) {
 
   const nombre = document.getElementById("nombre").value;
   const telefono = document.getElementById("telefono").value;
+  const inmobiliaria = document.getElementById("inmobiliaria").value;
+  const nombreInmobiliaria =
+    document.getElementById("nombreInmobiliaria").value || "No aplica";
 
   const sumaAsegurada = alquiler * meses;
 
@@ -152,7 +155,9 @@ function calcularSeguro(event) {
           <p><strong>3 cuotas sin interés:</strong> ${Math.round(
             cuotasBBVA_3
           ).toLocaleString()} c/u</p>
-          <button class="whatsapp-btn" onclick="enviarWhatsApp('BBVA', ${costoBBVA_descuento}, ${Math.round(cuotasBBVA_3)})">
+          <button class="whatsapp-btn" onclick="enviarWhatsApp('BBVA', ${costoBBVA_descuento}, ${Math.round(
+    cuotasBBVA_3
+  )})">
             <i class="fa-brands fa-whatsapp"></i> Contratar
           </button>
         </div>
@@ -204,6 +209,9 @@ function enviarWhatsApp(compania, costo, cuotaMensual) {
   const telefono = document.getElementById("telefono").value;
   const alquiler = document.getElementById("alquiler").value;
   const meses = document.getElementById("meses").value;
+  const inmobiliaria = document.getElementById("inmobiliaria").value;
+  const nombreInmobiliaria =
+    document.getElementById("nombreInmobiliaria").value || "No aplica";
 
   const mensaje = `¡Hola! Me interesa contratar el seguro de caución de *${compania}*.
   
@@ -213,6 +221,9 @@ function enviarWhatsApp(compania, costo, cuotaMensual) {
   • Teléfono: ${telefono}
   • Monto de alquiler: ${parseFloat(alquiler).toLocaleString()}
   • Duración del contrato: ${meses} meses
+  • ¿Título por inmobiliaria?: ${inmobiliaria === "si" ? "Sí" : "No"}
+• Nombre inmobiliaria: ${nombreInmobiliaria}
+
   
   *Cotización seleccionada:*
   • Costo total: ${costo.toLocaleString()} (contado)
@@ -236,6 +247,9 @@ function derivarWhatsApp() {
   const telefono = document.getElementById("telefono").value;
   const alquiler = document.getElementById("alquiler").value;
   const meses = document.getElementById("meses").value;
+  const inmobiliaria = document.getElementById("inmobiliaria").value;
+  const nombreInmobiliaria =
+    document.getElementById("nombreInmobiliaria").value || "No aplica";
 
   const mensaje = `¡Hola! Me interesa contratar un seguro de caución *comercial*.
   
@@ -245,6 +259,9 @@ function derivarWhatsApp() {
   • Teléfono: ${telefono}
   • Monto de alquiler: ${parseFloat(alquiler).toLocaleString()}
   • Duración del contrato: ${meses} meses
+  • ¿Título por inmobiliaria?: ${inmobiliaria === "si" ? "Sí" : "No"}
+• Nombre inmobiliaria: ${nombreInmobiliaria}
+
   
   ¿Podrían contactarme para continuar con el trámite?
   
@@ -258,29 +275,47 @@ function derivarWhatsApp() {
 }
 
 /* --- Contact form --- */
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-  event.preventDefault(); // Evita el envío predeterminado del formulario
+document
+  .getElementById("contact-form")
+  .addEventListener("submit", async function (event) {
+    event.preventDefault(); // Evita el envío predeterminado del formulario
 
-  const form = event.target;
-  const formData = new FormData(form);
-  const responseMensaje = document.getElementById('mensaje-respuesta');
+    const form = event.target;
+    const formData = new FormData(form);
+    const responseMensaje = document.getElementById("mensaje-respuesta");
 
-  try {
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: formData,
-      headers: {
-        'Accept': 'application/json'
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json",
+        },
+      });
+
+      if (response.ok) {
+        responseMensaje.textContent =
+          "Hemos recibido tu consulta y te contactaremos a la brevedad. ¡Gracias por confiar en nosotros!";
+        form.reset(); // Limpia el formulario
+      } else {
+        responseMensaje.textContent = "Error al enviar el mensaje.";
       }
-    });
-
-    if (response.ok) {
-      responseMensaje.textContent = 'Hemos recibido tu consulta y te contactaremos a la brevedad. ¡Gracias por confiar en nosotros!';
-      form.reset(); // Limpia el formulario
-    } else {
-      responseMensaje.textContent = 'Error al enviar el mensaje.';
+    } catch (error) {
+      responseMensaje.textContent = "Error al enviar el mensaje.";
     }
-  } catch (error) {
-    responseMensaje.textContent = 'Error al enviar el mensaje.';
+  });
+
+function toggleNombreInmobiliaria() {
+  const select = document.getElementById("inmobiliaria");
+  const campo = document.getElementById("campoNombreInmobiliaria");
+
+  if (select.value === "si") {
+    campo.style.display = "block";
+    document
+      .getElementById("nombreInmobiliaria")
+      .setAttribute("required", "required");
+  } else {
+    campo.style.display = "none";
+    document.getElementById("nombreInmobiliaria").removeAttribute("required");
   }
-});
+}
